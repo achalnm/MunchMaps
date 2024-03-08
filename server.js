@@ -29,12 +29,11 @@ app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
-// Endpoint to fetch restaurant data
 app.get('/restaurants', (req, res) => {
     connection.query('SELECT * FROM Restaurant', (error, results) => {
         if (error) {
-            console.error('Error fetching restaurants: ', error.message);
-            res.status(500).json({ error: 'Internal Server Error' });
+            console.error('Error fetching restaurants: ', error);
+            res.status(500).json({ error: 'Internal server error' });
             return;
         }
         res.json(results);
