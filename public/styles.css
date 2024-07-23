@@ -1,43 +1,112 @@
-/* styles.css */
-
+/* Set background image */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-image: url("bgg.jpg"); /* Default background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-attachment: fixed; /* Keep the background image fixed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-family: 'Roboto', sans-serif; /* Set font to Roboto */
+  background-color: rgba(0, 0, 0, 1.5); /* Darken the background by 10% */
 }
 
+
+/* Curved box for dropdowns */
+select {
+  background-color: rgba(255, 255, 255, 0.8); /* Darker black with 80% opacity */
+  color: rgb(0, 0, 0); /* White text color */
+  border-radius: 20px; /* Curved edges */
+  padding: 10px 20px; /* Padding around text */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  transition: all 0.3s ease; /* Animation for button click */
+}
+
+select:hover {
+  background-color: #ffffff;
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+/* Curved box for static text */
+body, h1, label, .restaurant {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark black with 60% opacity */
+  color: white; /* White text color */
+  border-radius: 20px; /* Curved edges */
+  padding: 10px 20px; /* Padding around text */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Larger heading size and centered alignment */
 h1 {
+  font-size: 36px;
   text-align: center;
+  margin-top: 20px;
 }
 
-#restaurants {
-  margin: 20px auto;
-  width: 80%;
+/* Centered alignment for filters */
+#filters {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.restaurant-table {
-  margin: 5px auto;
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ccc; /* Add border to the table */
+/* Styled search button with larger text, curved edges, and green background */
+button {
+  padding: 12px 632px;
+  font-size: 16px;
+  border-radius: 0; /* Remove rounded edges */
+  border: none;
+  font-weight: bold; /* Make the font thicker */
+  background-color: #ffd737;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 20px; /* Curved edges */
+  margin-top: 20px; /* Adjust margin */
+  margin-left: auto; /* Position at the end */
+  margin-right: auto; /* Position at the start */
+  display: block; /* Ensure it takes full width */
+  transition: all 0.3s ease; /* Animation for button click */
 }
 
-.restaurant-table th,
-.restaurant-table td {
-  padding: 10px;
-  border: 1px solid #ccc; /* Add border to table cells */
+button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05); /* Enlarge on hover */
 }
-
-.restaurant-table th {
-  text-align: right;
-}
-
+/* Additional styling for restaurant containers */
 .restaurants-container {
   margin: 20px auto;
   width: 80%;
 }
+.restaurant {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* Larger heading size for restaurant names */
+.restaurant h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* Medium font size for restaurant details */
+.restaurant p {
+  font-size: 16px;
+}
 
 .restaurant {
-  padding: 20px;
-  border: 1px solid #ccc;
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the flex container */
+  margin-bottom: 20px;
+}
+
+.text-container {
+  flex: 1; /* Take remaining space */
+}
+
+.text-container p {
+  margin: 0; /* Remove default margin */
+}
+
+.restaurant h2 {
+  font-size: 32px; /* Increase the font size for restaurant names */
+  color: #ffd737;
+}
+
+.restaurant p {
+  font-size: 24px; /* Increase the font size for restaurant details */
 }
