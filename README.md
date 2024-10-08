@@ -15,8 +15,8 @@ Munch Maps is an intuitive application designed to locate nearby restaurants and
 ## Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python/Flask (or other backend technology if applicable)
-- **APIs:** Google Maps API (or similar)
+- **Backend:** Python/Flask 
+- **APIs:** Google Maps API
 
 ## Getting Started
 
