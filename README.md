@@ -8,7 +8,7 @@ Munch Maps is an intuitive application designed to locate nearby restaurants and
 
 ## Features
 
-- **Location-Based Search:** Find food outlets near your current location.
+- **Location-Based Search:** Find food outlets near current location.
 - **Filter Options:** Refine your search by cuisine type, rating, and distance.
 - **Map Integration:** Visualize food locations on an interactive map.
 
