@@ -4,7 +4,7 @@ Welcome to **Munch Maps**! 🍽️ A smart food locator application that helps y
 
 ## Description
 
-Munch Maps is an intuitive application designed to locate nearby restaurants and food outlets based on user preferences. Whether you're craving a specific cuisine or looking for highly-rated spots, Munch Maps has you covered.
+Munch Maps is an intuitive application designed to locate nearby restaurants and food outlets based on the user preferences. Whether you're craving a specific cuisine or looking for highly-rated spots, Munch Maps has you covered.
 
 ## Features
 
