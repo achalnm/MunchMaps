@@ -20,7 +20,7 @@ Munch Maps is an intuitive application designed to locate nearby restaurants and
 
 ## Getting Started
 
-To get a local copy of Munch Maps up and running, follow these steps:
+To get a local copy of Munch Maps up and running:
 
 1. **Clone the repository:**
 
