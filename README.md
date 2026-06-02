@@ -1,6 +1,6 @@
 # Munch Maps
 
-Third year DBMS mini project from Jyothy Institute of Technology (VTU, Bangalore). Built to find restaurants near the college campus. I cleaned it up after submission and added a few things like search, live filters, and env variables for the DB config.
+Third year DBMS mini project from Jyothy Institute of Technology (VTU, Bangalore). Built to find restaurants near the college campus. Cleaned it up after submission and added a few things like search, live filters, and env variables for the DB config.
 
 ![MunchMaps preview](public/images/preview.png)
 *Filter by category, rating, distance, price, and service type. Results update live and show a count.*
