@@ -2,7 +2,7 @@
 
 3rd year DBMS mini project from Jyothy Institute of Technology (VTU, Bangalore). Built to find restaurants near the college campus. I cleaned it up after submission and added a few things like search, live filters, and env variables for the DB config.
 
-![MunchMaps preview](public/preview.png)
+![MunchMaps preview](public/images/preview.png)
 *Filter by category, rating, distance, price, and service type. Results update live and show a count.*
 
 This was a 5th-semester mini-project at Jyothy Institute of Technology (VTU), built while learning database design, SQL, and how to wire up a basic filtering system over a relational schema. The restaurant data is a small set from my local area at the time, so it works as a demo of those concepts but it is not a real-world product. I came back to it later to fix some security issues, clean up the code structure, and tidy a few things, but the scope is still that of the original student project.
@@ -28,18 +28,18 @@ CREATE DATABASE munch_maps;
 USE munch_maps;
 ```
 
-Then run the files in `db/` in this order:
+Then run the files in `database/` in this order:
 
 ```text
-munch_maps_category.sql
-munch_maps_rating.sql
-munch_maps_distance.sql
-munch_maps_price.sql
-munch_maps_service.sql
-munch_maps_restaurant.sql
+category.sql
+rating.sql
+distance.sql
+price.sql
+service.sql
+restaurant.sql
 ```
 
-If you already had the database set up before the ImageFile column was added, run `db/migrate_add_imagefile.sql` to add it.
+If you already had the database set up before the ImageFile column was added, run `database/migrate_add_imagefile.sql` to add it.
 
 ## Running it
 

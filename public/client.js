@@ -68,7 +68,7 @@ function renderRestaurants(restaurants) {
     text.append(name, contact, mapLink, branch, hours);
 
     const img = document.createElement('img');
-    img.src = r.ImageFile || 'background.jpg';
+    img.src = r.ImageFile || 'images/background.jpg';
     img.alt = r.Name + ' photo';
     img.classList.add('restaurant-img');
 
