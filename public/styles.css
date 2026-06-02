@@ -1,112 +1,184 @@
-/* Set background image */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-image: url("bgg.jpg"); /* Default background image */
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Keep the background image fixed */
-  overflow-y: auto; /* Enable vertical scrolling */
-  font-family: 'Roboto', sans-serif; /* Set font to Roboto */
-  background-color: rgba(0, 0, 0, 1.5); /* Darken the background by 10% */
+  background-image: url("bgg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #111;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  min-height: 100vh;
 }
 
-
-/* Curved box for dropdowns */
-select {
-  background-color: rgba(255, 255, 255, 0.8); /* Darker black with 80% opacity */
-  color: rgb(0, 0, 0); /* White text color */
-  border-radius: 20px; /* Curved edges */
-  padding: 10px 20px; /* Padding around text */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  transition: all 0.3s ease; /* Animation for button click */
+.logo {
+  display: block;
+  max-width: 280px;
+  height: auto;
+  margin: 24px auto 16px;
 }
 
-select:hover {
-  background-color: #ffffff;
-  transform: scale(1.05); /* Enlarge on hover */
-}
-
-/* Curved box for static text */
-body, h1, label, .restaurant {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark black with 60% opacity */
-  color: white; /* White text color */
-  border-radius: 20px; /* Curved edges */
-  padding: 10px 20px; /* Padding around text */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
-
-/* Larger heading size and centered alignment */
-h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Centered alignment for filters */
+/* Filters panel */
 #filters {
-  text-align: center;
-  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 0 auto 16px;
+  max-width: 900px;
+  width: 90%;
 }
 
-/* Styled search button with larger text, curved edges, and green background */
-button {
-  padding: 12px 632px;
-  font-size: 16px;
-  border-radius: 0; /* Remove rounded edges */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 1 140px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffd737;
+}
+
+select,
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
   border: none;
-  font-weight: bold; /* Make the font thicker */
-  background-color: #ffd737;
-  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 14px;
+  width: 100%;
   cursor: pointer;
-  border-radius: 20px; /* Curved edges */
-  margin-top: 20px; /* Adjust margin */
-  margin-left: auto; /* Position at the end */
-  margin-right: auto; /* Position at the start */
-  display: block; /* Ensure it takes full width */
-  transition: all 0.3s ease; /* Animation for button click */
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+select:hover,
+input[type="text"]:hover {
+  background-color: #fff;
+}
+
+select:focus,
+input[type="text"]:focus {
+  outline: 2px solid #ffd737;
+  background-color: #fff;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background-color: #ffd737;
+  color: #111;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 button:hover {
-  background-color: #ffffff;
-  transform: scale(1.05); /* Enlarge on hover */
+  background-color: #ffe566;
+  transform: scale(1.02);
 }
-/* Additional styling for restaurant containers */
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Result count */
+.result-count {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+/* Restaurant cards */
 .restaurants-container {
-  margin: 20px auto;
-  width: 80%;
-}
-.restaurant {
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-/* Larger heading size for restaurant names */
-.restaurant h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-/* Medium font size for restaurant details */
-.restaurant p {
-  font-size: 16px;
+  margin: 0 auto 40px;
+  max-width: 900px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .restaurant {
   display: flex;
-  align-items: flex-start; /* Align items at the start of the flex container */
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .text-container {
-  flex: 1; /* Take remaining space */
-}
-
-.text-container p {
-  margin: 0; /* Remove default margin */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .restaurant h2 {
-  font-size: 32px; /* Increase the font size for restaurant names */
+  font-size: 22px;
   color: #ffd737;
 }
 
 .restaurant p {
-  font-size: 24px; /* Increase the font size for restaurant details */
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.restaurant p a {
+  color: #ffd737;
+  word-break: break-all;
+}
+
+.restaurant-img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.message {
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 24px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .restaurant {
+    flex-direction: column;
+  }
+
+  .restaurant-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .filter-group {
+    flex: 1 1 100%;
+  }
 }

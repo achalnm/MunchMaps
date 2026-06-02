@@ -5,55 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Munch Maps</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="custom-styles.css" />
 </head>
 <body>
 
-  <!-- Add company logo -->
-  <img src="logo.png" alt="Company Logo" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  <img src="logo.png" alt="Munch Maps logo" class="logo">
 
   <div id="filters">
-    <label for="categoryType">CATEGORY</label>
-    <select id="categoryType">
-      <option value="">All Categories</option>
-      <option value="1">Cafes</option>
-      <option value="2">Restaurant</option>
-      <option value="3">Bakeries</option>
-    </select>
-    <label for="ratingValue">RATING</label>
-    <select id="ratingValue">
-      <option value="">Any Rating</option>
-      <option value="0.00">0 Star</option>
-      <option value="1.00">1 Star</option>
-      <option value="2.00">2 Stars</option>
-      <option value="3.00">3 Stars</option>
-      <option value="4.00">4 Stars</option>
-      <option value="5.00">5 Stars</option>
-    </select>
-    <label for="distanceRange">DISTANCE</label>
-    <select id="distanceRange">
-      <option value="">Any Distance</option>
-      <option value="1">Nearby</option>
-      <option value="2">Moderate</option>
-      <option value="3">Far</option>
-    </select>
-    <label for="priceRange">PRICE RANGE</label>
-    <select id="priceRange">
-      <option value="">Any Price</option>
-      <option value="1">Less than 50rs</option>
-      <option value="2">50rs to 100rs</option>
-      <option value="3">More than 100rs</option>
-    </select>
-    <label for="serviceType">SERVICE TYPE</label>
-    <select id="serviceType">
-      <option value="">Any Service</option>
-      <option value="1">Dine-in</option>
-      <option value="2">No seats</option>
-      <option value="3">Delivery</option>
-    </select>
-    <button onclick="searchRestaurants()">S E A R C H</button>
+    <div class="filter-row">
+      <div class="filter-group">
+        <label for="search">SEARCH</label>
+        <input type="text" id="search" placeholder="Restaurant name..." />
+      </div>
+
+      <div class="filter-group">
+        <label for="categoryType">CATEGORY</label>
+        <select id="categoryType">
+          <option value="">All Categories</option>
+          <option value="1">Cafes</option>
+          <option value="2">Restaurant</option>
+          <option value="3">Bakeries</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="ratingValue">RATING</label>
+        <select id="ratingValue">
+          <option value="">Any Rating</option>
+          <option value="0.00">0 Stars</option>
+          <option value="1.00">1 Star</option>
+          <option value="2.00">2 Stars</option>
+          <option value="3.00">3 Stars</option>
+          <option value="4.00">4 Stars</option>
+          <option value="5.00">5 Stars</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="distanceRange">DISTANCE</label>
+        <select id="distanceRange">
+          <option value="">Any Distance</option>
+          <option value="1">Nearby</option>
+          <option value="2">Moderate</option>
+          <option value="3">Far</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="priceRange">PRICE RANGE</label>
+        <select id="priceRange">
+          <option value="">Any Price</option>
+          <option value="1">Less than 50rs</option>
+          <option value="2">50rs to 100rs</option>
+          <option value="3">More than 100rs</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="serviceType">SERVICE TYPE</label>
+        <select id="serviceType">
+          <option value="">Any Service</option>
+          <option value="1">Dine-in</option>
+          <option value="2">No seats</option>
+          <option value="3">Delivery</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="searchBtn" onclick="searchRestaurants()">S E A R C H</button>
   </div>
 
+  <p id="result-count" class="result-count"></p>
   <div id="restaurants" class="restaurants-container"></div>
 
   <script src="client.js"></script>

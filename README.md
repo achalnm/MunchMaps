@@ -1,85 +1,75 @@
 # Munch Maps
 
-Welcome to **Munch Maps**! 🍽️ A smart food locator application that helps you find the best places to eat based on your preferences.
+3rd year DBMS mini project from Jyothy Institute of Technology (VTU, Bangalore). Built to find restaurants near the college campus. I cleaned it up after submission and added a few things like search, live filters, and env variables for the DB config.
 
-## Description
+![MunchMaps preview](public/preview.png)
+*Filter by category, rating, distance, price, and service type. Results update live and show a count.*
 
-Munch Maps is an intuitive application designed to locate nearby restaurants and food outlets based on user preferences. Whether you're craving a specific cuisine or looking for highly-rated spots, Munch Maps has you covered.
+This was a 5th-semester mini-project at Jyothy Institute of Technology (VTU), built while learning database design, SQL, and how to wire up a basic filtering system over a relational schema. The restaurant data is a small set from my local area at the time, so it works as a demo of those concepts but it is not a real-world product. I came back to it later to fix some security issues, clean up the code structure, and tidy a few things, but the scope is still that of the original student project.
 
-## Features
+## What it does
 
-- **Location-Based Search:** Find food outlets near current location.
-- **Filter Options:** Refine your search by cuisine type, rating, and distance.
-- **Map Integration:** Visualize food locations on an interactive map.
+Filter restaurants by category, rating, distance, price range, and service type. There's a name search too. Filters update live as you change them.
 
-## Technologies Used
+Distance is stored as a bucket (nearby / moderate / far) relative to the college, not real GPS coordinates, so there's no actual distance sorting.
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python/Flask 
-- **APIs:** Google Maps API
+## Stack
 
-## Getting Started
+Node.js + Express, MySQL 8, plain HTML/CSS/JS.
 
-To get a local copy of Munch Maps up and running:
+## Database setup
 
-1. **Clone the repository:**
+You need Node 18+ and MySQL 8.
 
-   Open your terminal and run:
-   ```bash
-   git clone https://github.com/yourusername/munch-maps.git
-   cd munch-maps
+Create the database first:
 
-2. **Set Up the Environment:**
+```sql
+CREATE DATABASE munch_maps;
+USE munch_maps;
+```
 
-   Create a virtual environment and activate it:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+Then run the files in `db/` in this order:
 
-3. **Install Dependencies:**
+```text
+munch_maps_category.sql
+munch_maps_rating.sql
+munch_maps_distance.sql
+munch_maps_price.sql
+munch_maps_service.sql
+munch_maps_restaurant.sql
+```
 
-   Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
+If you already had the database set up before the ImageFile column was added, run `db/migrate_add_imagefile.sql` to add it.
 
-4. **Set Up API Keys:**
+## Running it
 
-   Obtain your API keys from Google Maps (or other services) and add them to your environment variables. Create a .env file in the project root and add:
-   ```bash
-   GOOGLE_MAPS_API_KEY=your_api_key_here
+Clone and install:
 
-5. **Run the Application:**
+```bash
+git clone https://github.com/achalnm/MunchMaps.git
+cd MunchMaps
+npm install
+```
 
-   Start the development server:
-   ```bash
-   python app.py
+Copy `.env.example` to `.env` and fill in your MySQL password:
 
-## Usage
+```text
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=munch_maps
+PORT=3000
+```
 
-1. **Search for Food Outlets:**
+Start:
 
-   Enter your location or allow the app to access your current location. Use the filters to customize your search.
+```bash
+npm start
+```
 
-2. **View Results:**
+Open `http://localhost:3000`. Use `npm run dev` if you want auto-restart while editing.
 
-   Results will be displayed on the map and in a list format. Click on any result to view more details.
+## Made by
 
-3. **Filter Options:**
-
-   Use the filter options to narrow down your search by cuisine type, rating, and distance.
-
-## Contributing
-
-We welcome contributions to Munch Maps! If you have suggestions or improvements, please fork the repository and submit a pull request. Ensure your code follows the existing style and includes relevant tests.
-
-## Made By
-
-- **Achal N**  
-  [LinkedIn](https://www.linkedin.com/in/achal-n-35153821b)  
-  [Instagram](https://instagram.com/achal_n26)  
-  [GitHub](https://github.com/achalnm)
-
-- **Pujitha DR**  
-  [LinkedIn](https://www.linkedin.com/in/pujitha-ramesh-937986228)  
-  [Instagram](https://instagram.com/pujitha_dr)  
-  [GitHub](https://github.com/pujitha2712)
+- Achal N ([GitHub](https://github.com/achalnm), [LinkedIn](https://www.linkedin.com/in/achal-n-35153821b))
+- Pujitha DR ([GitHub](https://github.com/pujitha2712), [LinkedIn](https://www.linkedin.com/in/pujitha-ramesh-937986228))

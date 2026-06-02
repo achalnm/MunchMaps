@@ -35,6 +35,7 @@ CREATE TABLE `restaurant` (
   `Rating_id` int DEFAULT NULL,
   `OpenTime` varchar(45) DEFAULT NULL,
   `CloseTime` varchar(45) DEFAULT NULL,
+  `ImageFile` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`RestaurantID`),
   KEY `CategoryID` (`CategoryID`),
   KEY `PriceID` (`PriceID`),
@@ -55,7 +56,7 @@ CREATE TABLE `restaurant` (
 
 LOCK TABLES `restaurant` WRITE;
 /*!40000 ALTER TABLE `restaurant` DISABLE KEYS */;
-INSERT INTO `restaurant` VALUES (1,'Dhanalakshmi Biriyani','123-456-7890','https://shorturl.at/xETV6','Tataguni',2,3,1,2,4,'12:00pm','9:00pm'),(2,'Five Star Chicken','987-654-3210','https://shorturl.at/bmM14','Tataguni',1,2,1,2,5,'10:00am','9:30pm'),(3,'Masth Cafe','987-654-3216','https://shorturl.at/dtEHJ','Lakshmipura',1,2,1,3,3,'8:30am','9:00pm'),(4,'Nature Cafe','987-654-3234','https://shorturl.at/ghDH3','Nice Road',1,2,1,3,5,'10:00am','7:00pm'),(5,'Royal Cakes and Bakery','420-654-3234','https://shorturl.at/EHKWX','Tataguni',3,1,2,1,5,'8:00am','9:00pm'),(6,'Santrupthi Hotel','420-654-8362','https://shorturl.at/EHKWX','Tataguni',2,2,1,1,2,'8:00am','9:00pm'),(7,'Sri Brahmalingeshwara Hotel','123-123-2345','https://shorturl.at/bluU3','Tataguni',2,1,2,2,5,NULL,'8:00pm'),(8,'Sri Ganapati Hot Chips','345-123-4567','https://shorturl.at/bluU3','Tataguni',1,1,2,2,4,'9:00am','9:00pm'),(9,'Sri Lakshmi Janardhan Bakery and Sweets','567-543-4523','https://rb.gy/xw7jet','Tataguni',3,1,2,1,4,'7:45am','9:00pm'),(10,'Vaishnavi Palace','111-456-1234','https://rb.gy/h81h5t','Lakshmipura',2,3,1,3,5,'8:00am','10:00pm'),(11,'Veg Gate','222-678-9087','https://rb.gy/27e0au','Lakshmipura',2,2,1,3,5,'8:00am','10:00pm');
+INSERT INTO `restaurant` VALUES (1,'Dhanalakshmi Biriyani','123-456-7890','https://shorturl.at/xETV6','Tataguni',2,3,1,2,4,'12:00pm','9:00pm','DA.jpeg'),(2,'Five Star Chicken','987-654-3210','https://shorturl.at/bmM14','Tataguni',1,2,1,2,5,'10:00am','9:30pm','five star chicken.jpg'),(3,'Masth Cafe','987-654-3216','https://shorturl.at/dtEHJ','Lakshmipura',1,2,1,3,3,'8:30am','9:00pm','Masth cafe.jpg'),(4,'Nature Cafe','987-654-3234','https://shorturl.at/ghDH3','Nice Road',1,2,1,3,5,'10:00am','7:00pm','nature coffee.jpg'),(5,'Royal Cakes and Bakery','420-654-3234','https://shorturl.at/EHKWX','Tataguni',3,1,2,1,5,'8:00am','9:00pm','royal cakes.jpg'),(6,'Santrupthi Hotel','420-654-8362','https://shorturl.at/EHKWX','Tataguni',2,2,1,1,2,'8:00am','9:00pm','SH.jpeg'),(7,'Sri Brahmalingeshwara Hotel','123-123-2345','https://shorturl.at/bluU3','Tataguni',2,1,2,2,5,NULL,'8:00pm','BC.jpeg'),(8,'Sri Ganapati Hot Chips','345-123-4567','https://shorturl.at/bluU3','Tataguni',1,1,2,2,4,'9:00am','9:00pm','GHC.jpeg'),(9,'Sri Lakshmi Janardhan Bakery and Sweets','567-543-4523','https://rb.gy/xw7jet','Tataguni',3,1,2,1,4,'7:45am','9:00pm','lkbs.jpg'),(10,'Vaishnavi Palace','111-456-1234','https://rb.gy/h81h5t','Lakshmipura',2,3,1,3,5,'8:00am','10:00pm','vaishnavi Palace.jpg'),(11,'Veg Gate','222-678-9087','https://rb.gy/27e0au','Lakshmipura',2,2,1,3,5,'8:00am','10:00pm','vge gate.jpg');
 /*!40000 ALTER TABLE `restaurant` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
