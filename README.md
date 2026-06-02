@@ -73,3 +73,4 @@ Open `http://localhost:3000`. Use `npm run dev` if you want auto-restart while e
 
 - Achal N ([GitHub](https://github.com/achalnm), [LinkedIn](https://www.linkedin.com/in/achal-n-35153821b))
 - Pujitha DR ([GitHub](https://github.com/pujitha2712), [LinkedIn](https://www.linkedin.com/in/pujitha-ramesh-937986228))
+- Navaneet R Rao ([GitHub](https://github.com/navaneet-rao), [LinkedIn](https://www.linkedin.com/in/navaneet-r-rao/))
